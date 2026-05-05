@@ -8,7 +8,9 @@ def main():
     print("Aguardando")
 
     # watch_once bloqueia até receber exatamente um evento na chave
-    client.watch_once('ready/C')
+    valor, _ = client.get('ready/C')
+    if valor is None:
+        client.watch_once('ready/C')
 
     limite = random.randint(10, 20)
 
