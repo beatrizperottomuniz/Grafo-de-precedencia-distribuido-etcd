@@ -1,2 +1,2 @@
-# grafo-de-precedencia-distribuido-etcd
+# Grafo de precedência distribuído ETCD
 TDE da disciplina de Sistemas Distribuídos e Concorrente
