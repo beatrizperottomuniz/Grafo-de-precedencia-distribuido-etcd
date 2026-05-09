@@ -15,7 +15,7 @@ for i in range(1, limite + 1):
     print(i)
     time.sleep(1)
 
-print("Libera B e C")
+print("Liberando B e C")
 client.put('ready/B', '1', lease=lease)
 client.put('ready/C', '1', lease=lease)
 print("Fim")
