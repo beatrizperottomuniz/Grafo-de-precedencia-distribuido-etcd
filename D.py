@@ -5,7 +5,6 @@ import random
 
 def main():
     client = etcd3.client(host='localhost', port=2379)
-
     print("Aguardando")
 
     valor, _ = client.get('done/B')
@@ -23,6 +22,11 @@ def main():
         time.sleep(1)
 
     print("Fim")
+    # limpar keys (deletando)
+    client.delete('ready/B')
+    client.delete('ready/C')
+    client.delete('done/B')
+    client.delete('done/C')
 
 if __name__ == '__main__':
     main()
